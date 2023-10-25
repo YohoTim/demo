@@ -1,7 +1,7 @@
-basic.showLeds(`
+basic.show_leds("""
     . . . . .
     . # . # .
     . . . . .
     # . . . #
     . # # # .
-    `)
+    """)
