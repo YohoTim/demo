@@ -1,10 +1,7 @@
-# 创乐博 block:bit/micro:bit OLED 扩展
-在micro:bit主板/Block:bit主板上扩展OLED显示屏
-使用！
+# 麦克斯韦 blinkit扩展
 
-
-作者: 朱林 
-日期: 2020年1月15日  
+作者: ylp 
+日期: 2023年11月13日  
 
 ![](oled.png)  
   
@@ -102,17 +99,12 @@ draw a rectangle.
 
 ![](demo.png)  
 
-
-
 ## License
 
 MIT
-
-湖南创乐博智能科技有限公司
 
 ## Supported targets
 
 * for PXT/microbit
 
 
-[湖南创乐博智能科技有限公司](http://www.loborobot.com)

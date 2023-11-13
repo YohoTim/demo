@@ -1,7 +1,7 @@
 {
     "name": "OLED",
-    "version": "2.1.0",
-    "description": "创乐博block:bit/micro:bit OLED 128 × 64 扩展",
+    "version": "1.0.0",
+    "description": "麦克斯韦blinkit扩展",
     "license": "MIT",
     "dependencies": {
         "core": "*"

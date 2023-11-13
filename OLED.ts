@@ -1,9 +1,9 @@
-/**
-* -湖南创乐博智能科技有限公司-
+/*
+*
 * makecode I2C OLED 128x64 Package.
 */
 
-//% weight=20 color=#0855AA icon="O" block="创乐博OLED"
+//% weight=20 color=#0855AA icon="B" block="Blinkit"
 namespace OLED {
     let font: number[] = [];
     font[0] = 0x0022d422;
