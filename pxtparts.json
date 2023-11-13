@@ -1,7 +1,7 @@
 {
-  "OLED12864_I2C": {
+  "BLINKIT_I2C": {
     "visual": {
-      "image": "parts/OLED12864_I2C.svg",
+      "image": "parts/BLINKIT.svg",
       "width": 82,
       "height": 82,
       "pinDistance": 7.2,
@@ -27,7 +27,7 @@
     "numberOfPins": 4,
     "instantiation": {
       "kind": "function",
-      "fullyQualifiedName": "OLED12864_I2C.pixel,OLED12864_I2C.showString,OLED12864_I2C.showNumber,OLED12864_I2C.hline,OLED12864_I2C.vline,OLED12864_I2C.rect,OLED12864_I2C.invert,OLED12864_I2C.draw,OLED12864_I2C.clear,OLED12864_I2C.on,OLED12864_I2C.off,OLED12864_I2C.zoom,OLED12864_I2C.init",
+      "fullyQualifiedName": "BLINKIT_I2C.pixel,BLINKIT_I2C.showString,BLINKIT_I2C.showNumber,BLINKIT_I2C.hline,BLINKIT_I2C.vline,BLINKIT_I2C.rect,BLINKIT_I2C.invert,BLINKIT_I2C.draw,BLINKIT_I2C.clear,BLINKIT_I2C.on,BLINKIT_I2C.off,BLINKIT_I2C.zoom,BLINKIT_I2C.init",
       "argumentRoles": [{
                     "pinInstantiationIdx": 0
                 }]

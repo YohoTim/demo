@@ -1,5 +1,5 @@
 {
-    "name": "OLED",
+    "name": "BLINKIT",
     "version": "1.0.0",
     "description": "麦克斯韦blinkit扩展",
     "license": "MIT",
@@ -9,8 +9,8 @@
     "files": [
         "README.md",
         "pxtparts.json",
-        "OLED.ts",
-        "parts/OLED12864_I2C.svg"
+        "BLINKIT.ts",
+        "parts/BLINKIT.svg"
     ],
     "testFiles": [
         "test.ts"

@@ -1,10 +1,10 @@
 /*
 *
-* makecode I2C OLED 128x64 Package.
+* makecode I2C BLINKIT 128x64 Package.
 */
 
 //% weight=20 color=#0855AA icon="B" block="Blinkit"
-namespace OLED {
+namespace BLINKIT {
     let font: number[] = [];
     font[0] = 0x0022d422;
     font[1] = 0x0022d422;
@@ -177,14 +177,14 @@ namespace OLED {
     }
 
     /**
-     * set pixel in OLED
+     * set pixel in BLINKIT
      * @param x is X alis, eg: 0
      * @param y is Y alis, eg: 0
      * @param color is dot color, eg: 1
      */
-    //% blockId="OLED12864_I2C_PIXEL" block="设置像素在 x %x|y %y|颜色 %color"
+    //% blockId="BLINKIT_I2C_PIXEL" block="设置像素在 x %x|y %y|颜色 %color"
     //% weight=70 blockGap=8
-    //% parts=OLED12864_I2C trackArgs=0
+    //% parts=BLINKIT_I2C trackArgs=0
     export function pixel(x: number, y: number, color: number = 1) {
         let page = y >> 3
         let shift_page = y % 8
@@ -206,15 +206,15 @@ namespace OLED {
     }
 
     /**
-     * show text in OLED
+     * show text in BLINKIT
      * @param x is X alis, eg: 0
      * @param y is Y alis, eg: 0
      * @param s is the text will be show, eg: 'Hello!'
      * @param color is string color, eg: 1
      */
-    //% blockId="OLED12864_I2C_SHOWSTRING" block="显示字符 x %x|y %y|字符 %s|颜色 %color"
+    //% blockId="BLINKIT_I2C_SHOWSTRING" block="显示字符 x %x|y %y|字符 %s|颜色 %color"
     //% weight=80 blockGap=8
-    //% parts=OLED12864_I2C trackArgs=0
+    //% parts=BLINKIT_I2C trackArgs=0
     export function showString(x: number, y: number, s: string, color: number = 1) {
         let col = 0
         let p = 0
@@ -243,15 +243,15 @@ namespace OLED {
     }
 
     /**
-     * show a number in OLED
+     * show a number in BLINKIT
      * @param x is X alis, eg: 0
      * @param y is Y alis, eg: 0
      * @param num is the number will be show, eg: 12
      * @param color is number color, eg: 1
      */
-    //% blockId="OLED12864_I2C_NUMBER" block="显示数字在 x %x|y %y|数字 %num|颜色 %color"
+    //% blockId="BLINKIT_I2C_NUMBER" block="显示数字在 x %x|y %y|数字 %num|颜色 %color"
     //% weight=80 blockGap=8
-    //% parts=OLED12864_I2C trackArgs=0
+    //% parts=BLINKIT_I2C trackArgs=0
     export function showNumber(x: number, y: number, num: number, color: number = 1) {
         showString(x, y, num.toString(), color)
     }
@@ -263,9 +263,9 @@ namespace OLED {
      * @param len is the length of line, eg: 10
      * @param color is line color, eg: 1
      */
-    //% blockId="OLED12864_I2C_HLINE" block="画一条水平线在 x %x|y %y|数字 %len|颜色 %color"
+    //% blockId="BLINKIT_I2C_HLINE" block="画一条水平线在 x %x|y %y|数字 %len|颜色 %color"
     //% weight=71 blockGap=8
-    //% parts=OLED12864_I2C trackArgs=0
+    //% parts=BLINKIT_I2C trackArgs=0
     export function hline(x: number, y: number, len: number, color: number = 1) {
         for (let i = x; i < (x + len); i++)
             pixel(i, y, color)
@@ -278,9 +278,9 @@ namespace OLED {
      * @param len is the length of line, eg: 10
      * @param color is line color, eg: 1
      */
-    //% blockId="OLED12864_I2C_VLINE" block="画一条垂直线在 x %x|y %y|数字 %len|颜色 %color"
+    //% blockId="BLINKIT_I2C_VLINE" block="画一条垂直线在 x %x|y %y|数字 %len|颜色 %color"
     //% weight=72 blockGap=8
-    //% parts=OLED12864_I2C trackArgs=0
+    //% parts=BLINKIT_I2C trackArgs=0
     export function vline(x: number, y: number, len: number, color: number = 1) {
         for (let i = y; i < (y + len); i++)
             pixel(x, i, color)
@@ -294,9 +294,9 @@ namespace OLED {
      * @param y2 is Y alis, eg: 30
      * @param color is line color, eg: 1
      */
-    //% blockId="OLED12864_I2C_RECT" block="画一个矩形在 x1 %x1|y1 %y1|x2 %x2|y2 %y2|颜色 %color"
+    //% blockId="BLINKIT_I2C_RECT" block="画一个矩形在 x1 %x1|y1 %y1|x2 %x2|y2 %y2|颜色 %color"
     //% weight=73 blockGap=8
-    //% parts=OLED12864_I2C trackArgs=0
+    //% parts=BLINKIT_I2C trackArgs=0
     export function rect(x1: number, y1: number, x2: number, y2: number, color: number = 1) {
         if (x1 > x2)
             x1 = [x2, x2 = x1][0];
@@ -312,9 +312,9 @@ namespace OLED {
      * invert display
      * @param d true: invert / false: normal, eg: true
      */
-    //% blockId="OLED12864_I2C_INVERT" block="反转显示 %d"
+    //% blockId="BLINKIT_I2C_INVERT" block="反转显示 %d"
     //% weight=65 blockGap=8
-    //% parts=OLED12864_I2C trackArgs=0
+    //% parts=BLINKIT_I2C trackArgs=0
     export function invert(d: boolean = true) {
         let n = (d) ? 0xA7 : 0xA6
         cmd1(n)
@@ -323,9 +323,9 @@ namespace OLED {
     /**
      * draw / redraw screen
      */
-    //% blockId="OLED12864_I2C_DRAW" block="绘制"
+    //% blockId="BLINKIT_I2C_DRAW" block="绘制"
     //% weight=64 blockGap=8
-    //% parts=OLED12864_I2C trackArgs=0
+    //% parts=BLINKIT_I2C trackArgs=0
     export function draw() {
         set_pos()
         pins.i2cWriteBuffer(_I2CAddr, _screen)
@@ -334,9 +334,9 @@ namespace OLED {
     /**
      * clear screen
      */
-    //% blockId="OLED12864_I2C_CLEAR" block="清空显示"
+    //% blockId="BLINKIT_I2C_CLEAR" block="清空显示"
     //% weight=63 blockGap=8
-    //% parts=OLED12864_I2C trackArgs=0
+    //% parts=BLINKIT_I2C trackArgs=0
     export function clear() {
         _screen.fill(0)
         _screen[0] = 0x40
@@ -346,9 +346,9 @@ namespace OLED {
     /**
      * turn on screen
      */
-    //% blockId="OLED12864_I2C_ON" block="打开显示"
+    //% blockId="BLINKIT_I2C_ON" block="打开显示"
     //% weight=62 blockGap=8
-    //% parts=OLED12864_I2C trackArgs=0
+    //% parts=BLINKIT_I2C trackArgs=0
     export function on() {
         cmd1(0xAF)
     }
@@ -356,9 +356,9 @@ namespace OLED {
     /**
      * turn off screen
      */
-    //% blockId="OLED12864_I2C_OFF" block="关掉显示"
+    //% blockId="BLINKIT_I2C_OFF" block="关掉显示"
     //% weight=61 blockGap=8
-    //% parts=OLED12864_I2C trackArgs=0
+    //% parts=BLINKIT_I2C trackArgs=0
     export function off() {
         cmd1(0xAE)
     }
@@ -367,21 +367,21 @@ namespace OLED {
      * zoom mode
      * @param d true zoom / false normal, eg: true
      */
-    //% blockId="OLED12864_I2C_ZOOM" block="zoom %d"
+    //% blockId="BLINKIT_I2C_ZOOM" block="zoom %d"
     //% weight=60 blockGap=8
-    //% parts=OLED12864_I2C trackArgs=0
+    //% parts=BLINKIT_I2C trackArgs=0
     export function zoom(d: boolean = true) {
         _ZOOM = (d) ? 1 : 0
         cmd2(0xd6, _ZOOM)
     }
 
     /**
-     * OLED initialize
+     * BLINKIT initialize
      * @param addr is i2c addr, eg: 60
      */
-    //% blockId="OLED12864_I2C_init" block="初始化OLED 地址为: %addr"
+    //% blockId="BLINKIT_I2C_init" block="初始化BLINKIT 地址为: %addr"
     //% weight=100 blockGap=8
-    //% parts=OLED12864_I2C trackArgs=0
+    //% parts=BLINKIT_I2C trackArgs=0
     export function init(addr: number) {
         _I2CAddr = addr;
         cmd1(0xAE)       // SSD1306_DISPLAYOFF
