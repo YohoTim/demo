@@ -1,12 +1,10 @@
 {
-    "name": "Demo",
-    "version": "1.0",
-    "description": "blinkbit v1.0",
+    "name": "OLED",
+    "version": "2.1.0",
+    "description": "创乐博block:bit/micro:bit OLED 128 × 64 扩展",
     "license": "MIT",
     "dependencies": {
-        "core": "*",
-        "radio": "*",
-        "microphone": "*"
+        "core": "*"
     },
     "files": [
         "README.md",
@@ -17,12 +15,5 @@
     "testFiles": [
         "test.ts"
     ],
-    "targetVersions": {
-        "target": "6.0.19",
-        "targetId": "microbit"
-    },
-    "supportedTargets": [
-        "microbit"
-    ],
-    "preferredEditor": "tsprj"
+    "public": true
 }

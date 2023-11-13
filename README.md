@@ -1,24 +1,118 @@
+# 创乐博 block:bit/micro:bit OLED 扩展
+在micro:bit主板/Block:bit主板上扩展OLED显示屏
+使用！
 
-> 在 [https://yohotim.github.io/demo/](https://yohotim.github.io/demo/) 打开此页面
 
-## 用作扩展
+作者: 朱林 
+日期: 2020年1月15日  
 
-此仓库可以作为 **插件** 添加到 MakeCode 中。
+![](oled.png)  
+  
 
-* 打开 [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* 点击 **新项目**
-* 点击齿轮图标菜单下的 **扩展**
-* 搜索 **https://github.com/yohotim/demo** 并导入
+## 添加扩展
 
-## 编辑此项目
+打开您的microbit makecode项目，在扩展中，粘贴  
 
-在 MakeCode 中编辑此仓库。
+https://github.com/zhuning239/OLED  
 
-* 打开 [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* 点击 **导入**，然后点击 **导入 URL**
-* 粘贴 **https://github.com/yohotim/demo** 并点击导入
+搜索框，然后搜索，并点击添加。  
 
-#### 元数据（用于搜索、渲染）
+## 基础说明
+
+```
+let item = 0
+OLED12864_I2C.init(60)
+OLED12864_I2C.rect(0, 0, 60, 30, 1)
+OLED12864_I2C.showString(0, 0, "Hello!", 1)
+OLED12864_I2C.showString(0, 1, "1234567890", 0)
+item = 0
+basic.forever(() => {
+    OLED12864_I2C.showNumber(0, 3, item, 1)
+    item += 1
+    basic.pause(1000)
+}) 
+```
+
+## API库
+
+- **init(addr: number)**  
+initialize OLED module.
+addr: OLED I2C address, it maybe 60 or 61, depend on hardware, default is 60.
+
+- **zoom(d: boolean = true)**  
+set zoom mode. In zoom mode, it will show in double size.  
+d: mode
+  - true, zoom mode.
+  - false, normal mode.
+
+- **on()**  
+turn on OLED.
+
+- **off()**  
+turn off OLED.
+
+- **clear()**  
+clear all content in OLED.
+
+- **draw()**  
+force redraw the content.  
+
+- **invert(d: boolean = true)**  
+show in invert mode.
+
+- **pixel(x: number, y: number, color: number = 1)**  
+set a pixel in OLED.
+  - x, X alis position, 0 - 63 in zoom mode, 0 - 127 in normal mode.  
+  - y, Y alis position, 0 - 31 in zoom mode, 0 - 63 in normal mode. 
+  - color, draw color, it can be 1 or 0.
+
+- **showString(x: number, y: number, s: string, color: number = 1)**  
+show a text at specified position.
+  - x, X alis position, 0 - 11 in zoom mode, 0 - 23 in normal mode.  
+  - y, Y alis position, 0 - 3 in zoom mode, 0 - 7 in normal mode. 
+  - s, the text will be show
+  - color, draw color, it can be 1 or 0.
+
+- **showNumber(x: number, y: number, num: number, color: number = 1)**  
+show a number at specified position.
+  - x, X alis position, 0 - 11 in zoom mode, 0 - 23 in normal mode.  
+  - y, Y alis position, 0 - 3 in zoom mode, 0 - 7 in normal mode. 
+  - num, the number will be show
+  - color, draw color, it can be 1 or 0.
+
+- **hline(x: number, y: number, len: number, color: number = 1)**  
+draw a horizontal line.  
+  - (x, y), start point
+  - len, length of the line
+  - color, draw color, it can be 1 or 0.
+
+- **vline(x: number, y: number, len: number, color: number = 1)**  
+draw a vertical line.  
+  - (x, y), start point
+  - len, length of the line
+  - color, draw color, it can be 1 or 0.
+
+- **rect(x1: number, y1: number, x2: number, y2: number, color: number = 1)**  
+draw a rectangle.
+  - (x1, y1), start point
+  - (x2, y2), end point
+  - color, draw color, it can be 1 or 0.
+
+## Demo
+
+![](demo.png)  
+
+
+
+## License
+
+MIT
+
+湖南创乐博智能科技有限公司
+
+## Supported targets
 
 * for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+
+
+[湖南创乐博智能科技有限公司](http://www.loborobot.com)
