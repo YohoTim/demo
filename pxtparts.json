@@ -27,7 +27,7 @@
     "numberOfPins": 4,
     "instantiation": {
       "kind": "function",
-      "fullyQualifiedName": "BLINKIT_I2C.showString,BLINKIT_I2C.showNumber,BLINKIT_I2C.init",
+      "fullyQualifiedName": "BLINKIT_I2C.showFigure,BLINKIT_I2C.init",
       "argumentRoles": [{
                     "pinInstantiationIdx": 0
                 }]
