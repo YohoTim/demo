@@ -1,6 +1,6 @@
 /*
 *
-* makecode I2C BLINKIT 128x64 Package.
+* makecode I2C BLINKIT Package.
 */
 
 //% weight=20 color=#0855AA icon="B" block="Blinkit"
@@ -19,7 +19,6 @@ namespace BLINKIT {
 
     /**
      * BLINKIT initialize
-     * @param addr is i2c addr, eg: 60
      */
     //% blockId="BLINKIT_I2C_init" block="初始化BLINKIT"
     //% weight=100 blockGap=8
