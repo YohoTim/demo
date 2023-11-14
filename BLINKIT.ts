@@ -16,10 +16,7 @@ namespace BLINKIT {
 
     /**
      * show text in BLINKIT
-     * @param x is X alis, eg: 0
-     * @param y is Y alis, eg: 0
      * @param s is the text will be show, eg: 'Hello!'
-     * @param color is string color, eg: 1
      */
     //% blockId="BLINKIT_I2C_SHOWFIGURE" block="显示图案 字符 %s"
     //% weight=80 blockGap=8
@@ -46,10 +43,10 @@ namespace BLINKIT {
      * BLINKIT initialize
      * @param addr is i2c addr, eg: 60
      */
-    //% blockId="BLINKIT_I2C_init" block="初始化BLINKIT 地址为: %addr"
+    //% blockId="BLINKIT_I2C_init" block="初始化BLINKIT"
     //% weight=100 blockGap=8
     //% parts=BLINKIT_I2C trackArgs=0
-    export function init(addr: number) {
+    export function init() {
         serial.redirect(
             SerialPin.P8,
             SerialPin.P12,
