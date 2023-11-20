@@ -80,7 +80,34 @@ namespace BLINKIT {
     //% blockId="BLINKIT_I2C_Servo_turn" block="舵机,位置 %PosNum|,速度 %Spd|,转动%degree" 
     //% weight=97 blockGap=8
     export function servoTurn(PosNum: number = 1, Spd: number, degree: number) {
+        let projectInfo = "7e" + "5" + "d" + PosNum + "0" + Spd + "#"
+        serial.writeString(projectInfo)
+    }
+
+        
+    /**
+    * Shows all the ZIP LEDs as a given color (range 0-255 for r, g, b). 
+    * @param rgb RGB color of the LED
+    */
+    //% subcategory="Motor"
+    //% blockId="BLINKIT_I2C_motor_turn" block="直流电机,位置 %PosNum|,速度 %Spd" 
+    //% weight=97 blockGap=8
+    export function motorTurn(PosNum: number = 1, Spd: number) {
+        let projectInfo = "7e" + "5" + "d" + PosNum + "0" + Spd + "#"
+        serial.writeString(projectInfo)
+    }
+
+    /**
+    * Shows all the ZIP LEDs as a given color (range 0-255 for r, g, b). 
+    * @param rgb RGB color of the LED
+    */
+    //% subcategory="LED"
+    //% blockId="BLINKIT_I2C_Led_show" block="RGB灯,位置 %PosNum|,色彩R %r|,G %g|,B %b|,特效%rgb=BLINKIT_I2C_SHOW_COLOR_COLORS" 
+    //% weight=97 blockGap=8
+    export function ledShow(PosNum: number = 1, r: number, g: number, b: number, rgb: number) {
         let projectInfo = "7e" + "5" + "d" + PosNum + "0" + rgb + "#"
         serial.writeString(projectInfo)
     }
+
+
 }
