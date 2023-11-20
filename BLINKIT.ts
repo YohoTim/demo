@@ -8,15 +8,15 @@
 */
 enum ZipLedColors {
     //% block=随机
-    Red = "0",
+    Red = 0,
     //% block=环绕
-    Orange = "1",
+    Orange = 1,
     //% block=S弯
-    Yellow = "2",
+    Yellow = 2,
     //% block=扫描
-    Green = "3",
+    Green = 3,
     //% block=直接
-    Blue = "4"
+    Blue = 4
 }
 
 //% weight=20 color=#0855AA icon="B" block="Blinkit"
@@ -53,8 +53,8 @@ namespace BLINKIT {
     */
     //% blockId="BLINKIT_I2C_SHOW_COLOR" block="8x8,位置 %PosNum|,清屏,特效%rgb=BLINKIT_I2C_SHOW_COLOR_COLORS" 
     //% weight=97 blockGap=8
-    export function showColor(PosNum: number = 1, rgb: string) {
-        let projectInfo = "7e5d00" + rgb + "#"
+    export function showColor(PosNum: number = 1, rgb: number) {
+        let projectInfo = "7e" + "5" + "d" + PosNum + "0" + rgb + "#"
         serial.writeString(projectInfo)
     }
 
