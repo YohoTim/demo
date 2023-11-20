@@ -27,7 +27,7 @@
     "numberOfPins": 4,
     "instantiation": {
       "kind": "function",
-      "fullyQualifiedName": "BLINKIT_I2C.showFigure,BLINKIT_I2C.init,BLINKIT_I2C.showColor,BLINKIT_I2C.colors,BLINKIT_I2C.servoTurn,BLINKIT_I2C.motorTurn,BLINKIT_I2C.ledShow",
+      "fullyQualifiedName": "BLINKIT_I2C.showFigure,BLINKIT_I2C.init,BLINKIT_I2C.showColor,BLINKIT_I2C.colors,BLINKIT_I2C.servoTurn,BLINKIT_I2C.motorTurn,BLINKIT_I2C.ledShow,BLINKIT_I2C.mp3cmd,BLINKIT_I2C.mp3cmd2",
       "argumentRoles": [{
                     "pinInstantiationIdx": 0
                 }]

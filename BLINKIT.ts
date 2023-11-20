@@ -109,5 +109,28 @@ namespace BLINKIT {
         serial.writeString(projectInfo)
     }
 
+    /**
+    * Shows all the ZIP LEDs as a given color (range 0-255 for r, g, b). 
+    * @param rgb RGB color of the LED
+    */
+    //% subcategory="MP3"
+    //% blockId="BLINKIT_I2C_Mp3_cmd" block="MP3,位置 %PosNum|,%rgb=BLINKIT_I2C_SHOW_COLOR_COLORS" 
+    //% weight=97 blockGap=8
+    export function mp3cmd(PosNum: number = 1, rgb: number) {
+        let projectInfo = "7e" + "5" + "d" + PosNum + "0" + rgb + "#"
+        serial.writeString(projectInfo)
+    }
 
+    
+    /**
+    * Shows all the ZIP LEDs as a given color (range 0-255 for r, g, b). 
+    * @param rgb RGB color of the LED
+    */
+    //% subcategory="MP3"
+    //% blockId="BLINKIT_I2C_Mp3_cmdw" block="MP3,位置 %PosNum|,指定%rgb=BLINKIT_I2C_SHOW_COLOR_COLORS| %indexNum" 
+    //% weight=97 blockGap=8
+    export function mp3cmd2(PosNum: number = 1, rgb: number, indexNum: number) {
+        let projectInfo = "7e" + "5" + "d" + PosNum + "0" + rgb + "#"
+        serial.writeString(projectInfo)
+    }
 }
