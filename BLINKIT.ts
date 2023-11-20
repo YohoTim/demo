@@ -45,6 +45,43 @@ enum ZipLedColors {
     Blue = 4
 }
 
+
+/**
+* Well known colors for ZIP LEDs
+*/
+enum mp3play {
+    //% block=播放
+    Red = 0,
+    //% block=音量
+    Orange = 1
+}
+
+/**
+* Well known colors for ZIP LEDs
+*/
+enum mp3mode {
+    //% block=暂停
+    Red = 0,
+    //% block=播放
+    Orange = 1,
+    //% block=下一曲
+    Yellow = 2,
+    //% block=上一曲
+    Green = 3,
+    //% block=音量+
+    Blue = 4
+    //% block=音量-
+    Red1 = 5,
+    //% block=onestop
+    Orange2 = 6,
+    //% block=单曲
+    Yellow3 = 7,
+    //% block=全局
+    Green4 = 8,
+    //% block=随机
+    Blue5 = 9
+}
+
 //% weight=20 color=#0855AA icon="B" block="Blinkit"
 namespace BLINKIT {
 
@@ -109,6 +146,27 @@ namespace BLINKIT {
     }
 
     
+
+    /**
+    * Gets the RGB value of a known color
+    */
+    //% subcategory="MP3"
+    //% weight=2 blockGap=8
+    //% blockId="BLINKIT_I2C_MP3" block="%color"
+    export function mp3m(color: mp3mode): number {
+        return color;
+    }
+
+    /**
+    * Gets the RGB value of a known color
+    */
+    //% subcategory="MP3"
+    //% weight=2 blockGap=8
+    //% blockId="BLINKIT_I2C_MP3Play" block="%color"
+    export function mp3p(color: mp3play): number {
+        return color;
+    }
+
     /**
     * Shows all the ZIP LEDs as a given color (range 0-255 for r, g, b). 
     * @param rgb RGB color of the LED
@@ -151,7 +209,7 @@ namespace BLINKIT {
     * @param rgb RGB color of the LED
     */
     //% subcategory="MP3"
-    //% blockId="BLINKIT_I2C_Mp3_cmd" block="MP3,位置 %PosNum|,%rgb=BLINKIT_I2C_SHOW_COLOR_COLORS" 
+    //% blockId="BLINKIT_I2C_Mp3_cmd" block="MP3,位置 %PosNum|,%rgb=BLINKIT_I2C_MP3" 
     //% weight=97 blockGap=8
     export function mp3cmd(PosNum: number = 1, rgb: number) {
         let projectInfo = "7e" + "5" + "d" + PosNum + "0" + rgb + "#"
@@ -164,7 +222,7 @@ namespace BLINKIT {
     * @param rgb RGB color of the LED
     */
     //% subcategory="MP3"
-    //% blockId="BLINKIT_I2C_Mp3_cmdw" block="MP3,位置 %PosNum|,指定%rgb=BLINKIT_I2C_SHOW_COLOR_COLORS| %indexNum" 
+    //% blockId="BLINKIT_I2C_Mp3_cmdw" block="MP3,位置 %PosNum|,指定%rgb=BLINKIT_I2C_MP3Play| %indexNum" 
     //% weight=97 blockGap=8
     export function mp3cmd2(PosNum: number = 1, rgb: number, indexNum: number) {
         let projectInfo = "7e" + "5" + "d" + PosNum + "0" + rgb + "#"
