@@ -6,6 +6,32 @@
 /**
 * Well known colors for ZIP LEDs
 */
+enum LedColors {
+    //% block=直接
+    Red = 0,
+    //% block=渐变
+    Orange = 1
+}
+
+/**
+* Well known colors for ZIP LEDs
+*/
+enum ZipLedColors {
+    //% block=随机
+    Red = 0,
+    //% block=环绕
+    Orange = 1,
+    //% block=S弯
+    Yellow = 2,
+    //% block=扫描
+    Green = 3,
+    //% block=直接
+    Blue = 4
+}
+
+/**
+* Well known colors for ZIP LEDs
+*/
 enum ZipLedColors {
     //% block=随机
     Red = 0,
@@ -71,6 +97,17 @@ namespace BLINKIT {
         return color;
     }
 
+
+    /**
+    * Gets the RGB value of a known color
+    */
+    //% subcategory="LED"
+    //% weight=2 blockGap=8
+    //% blockId="BLINKIT_I2C_SHOW_COLORS" block="%color"
+    export function lcolors(color: LedColors): number {
+        return color;
+    }
+
     
     /**
     * Shows all the ZIP LEDs as a given color (range 0-255 for r, g, b). 
@@ -102,7 +139,7 @@ namespace BLINKIT {
     * @param rgb RGB color of the LED
     */
     //% subcategory="LED"
-    //% blockId="BLINKIT_I2C_Led_show" block="RGB灯,位置 %PosNum|,色彩R %r|,G %g|,B %b|,特效%rgb=BLINKIT_I2C_SHOW_COLOR_COLORS" 
+    //% blockId="BLINKIT_I2C_Led_show" block="RGB灯,位置 %PosNum|,色彩R %r|,G %g|,B %b|,特效%rgb=BLINKIT_I2C_SHOW_COLORS" 
     //% weight=97 blockGap=8
     export function ledShow(PosNum: number = 1, r: number, g: number, b: number, rgb: number) {
         let projectInfo = "7e" + "5" + "d" + PosNum + "0" + rgb + "#"
