@@ -7,26 +7,16 @@
 * Well known colors for ZIP LEDs
 */
 enum ZipLedColors {
-    //% block=red
+    //% block=随机
     Red = 0xFF0000,
-    //% block=orange
+    //% block=环绕
     Orange = 0xFFA500,
-    //% block=yellow
+    //% block=S弯
     Yellow = 0xFFFF00,
-    //% block=green
+    //% block=扫描
     Green = 0x00FF00,
-    //% block=blue
-    Blue = 0x0000FF,
-    //% block=indigo
-    Indigo = 0x4b0082,
-    //% block=violet
-    Violet = 0x8a2be2,
-    //% block=purple
-    Purple = 0xFF00FF,
-    //% block=white
-    White = 0xFFFFFF,
-    //% block=black
-    Black = 0x000000
+    //% block=直接
+    Blue = 0x0000FF
 }
 
 //% weight=20 color=#0855AA icon="B" block="Blinkit"
