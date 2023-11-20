@@ -26,11 +26,12 @@ namespace BLINKIT {
      * show text in BLINKIT
      * @param s is the text will be show, eg: 'Hello!'
      */
-    //% blockId="BLINKIT_I2C_SHOWFIGURE" block="显示图案 字符 %s"
+    //% blockId="BLINKIT_I2C_SHOWFIGURE" block="8x8,位置 %PosNum|显示字符串 %s"
     //% weight=80 blockGap=8
     //% parts=BLINKIT_I2C trackArgs=0
-    export function showFigure(s: string) {
-        serial.writeString(s)
+    export function showFigure(PosNum: number = 1, s: string) {
+        let projectInfo = "7e" + "9" + "d" + PosNum + "1" + s + "#"
+        serial.writeString(projectInfo)
     }
 
     /**
