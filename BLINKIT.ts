@@ -25,7 +25,8 @@ namespace BLINKIT {
     /**
      * show text in BLINKIT
      * @param s is the text will be show, eg: 'Hello!'
-     */
+    */
+    //% subcategory="8x8"
     //% blockId="BLINKIT_I2C_SHOWFIGURE" block="8x8,位置 %PosNum|显示字符串 %s"
     //% weight=80 blockGap=8
     //% parts=BLINKIT_I2C trackArgs=0
@@ -52,6 +53,7 @@ namespace BLINKIT {
     * Shows all the ZIP LEDs as a given color (range 0-255 for r, g, b). 
     * @param rgb RGB color of the LED
     */
+    //% subcategory="8x8"
     //% blockId="BLINKIT_I2C_SHOW_COLOR" block="8x8,位置 %PosNum|,清屏,特效%rgb=BLINKIT_I2C_SHOW_COLOR_COLORS" 
     //% weight=97 blockGap=8
     export function showColor(PosNum: number = 1, rgb: number) {
@@ -62,6 +64,7 @@ namespace BLINKIT {
     /**
     * Gets the RGB value of a known color
     */
+    //% subcategory="8x8"
     //% weight=2 blockGap=8
     //% blockId="BLINKIT_I2C_SHOW_COLOR_COLORS" block="%color"
     export function colors(color: ZipLedColors): number {
@@ -73,6 +76,7 @@ namespace BLINKIT {
     * Shows all the ZIP LEDs as a given color (range 0-255 for r, g, b). 
     * @param rgb RGB color of the LED
     */
+    //% subcategory="Servo"
     //% blockId="BLINKIT_I2C_Servo_turn" block="舵机,位置 %PosNum|,速度 %Spd|,转动%degree" 
     //% weight=97 blockGap=8
     export function servoTurn(PosNum: number = 1, Spd: number, degree: number) {
