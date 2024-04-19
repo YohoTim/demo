@@ -197,7 +197,7 @@ namespace BLINKIT {
     * @param rgb RGB color of the LED
     */
     //% subcategory="LED"
-    //% blockId="BLINKIT_I2C_Led_show" block="RGB灯,位置 %PosNum|,色彩R %r|,G %g|,B %b|,特效%rgb=BLINKIT_I2C_SHOW_COLORS" 
+    //% blockId="BLINKIT_I2C_Led_show" block="RGB灯,位置 %PosNum|,色彩R %r|,G %g|,B %b|,动画%rgb=BLINKIT_I2C_SHOW_COLORS" 
     //% weight=97 blockGap=8
     export function ledShow(PosNum: number = 1, r: number, g: number, b: number, rgb: number) {
         let projectInfo = "7e" + "5" + "d" + PosNum + "0" + rgb + "#"
