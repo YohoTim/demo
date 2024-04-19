@@ -1,7 +1,7 @@
 {
   "BLINKIT_I2C": {
     "visual": {
-      "image": "parts/BLINKIT.svg",
+      "image": "parts/Blinkit.svg",
       "width": 82,
       "height": 82,
       "pinDistance": 7.2,
