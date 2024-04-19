@@ -90,26 +90,18 @@ namespace BLINKIT {
      * @param s is the text will be show, eg: 'Hello!'
     */
     //% subcategory="8x8"
-    // //% blockId="BLINKIT_I2C_SHOWFIGURE" block="8x8,位置 %PosNum|显示字符串 %s|动画 %a|速度 %v"
-    // //% weight=80 blockGap=8
-    // //% parts=BLINKIT_I2C trackArgs=0
-    // export function showFigure(PosNum: number = 1, s: string, a: number = 0, v: number = 1) {
-    //     const fangxiang = a * 10 + v;  
-    //     let projectInfo = "7e" + "9" + "d" + PosNum + "1" + fangxiang.toString() + s + "#";  
-    //     //let projectInfo = "7e" + "9" + "d" + PosNum + "1" + s + "#"
-    //     serial.writeString(projectInfo)
-    // }
-    //% blockId="BLINKIT_I2C_SHOWFIGURE" block="8x8灯,位置 %PosNum|,色彩R %r|,G %g|,B %b|,特效%rgb=BLINKIT_I2C_SHOW_COLORS" 
-    //% weight=97 blockGap=8
-    export function ledShow(PosNum: number = 1, r: number, g: number, b: number, rgb: number) {
-        let projectInfo = "7e" + "5" + "d" + PosNum + "0" + rgb + "#"
+    //% blockId="BLINKIT_I2C_SHOWFIGURE" block="8x8,位置 %PosNum|显示字符串 %s"
+    //% weight=80 blockGap=8
+    //% parts=BLINKIT_I2C trackArgs=0
+    export function showFigure(PosNum: number = 1, s: string) {
+        let projectInfo = "7e" + "9" + "d" + PosNum + "1" + s + "#"
         serial.writeString(projectInfo)
     }
 
     /**
      * BLINKIT initialize
      */
-    //% blockId="BLINKIT_I2C_init" block="初始化Blinkit"
+    //% blockId="BLINKIT_I2C_init" block="初始化BLINKIT"
     //% weight=100 blockGap=8
     //% parts=BLINKIT_I2C trackArgs=0
     export function init() {
@@ -125,7 +117,7 @@ namespace BLINKIT {
     * @param rgb RGB color of the LED
     */
     //% subcategory="8x8"
-    //% blockId="BLINKIT_I2C_SHOW_COLOR" block="8x8,位置 %PosNum|,清屏,特效%rgb=BLINKIT_I2C_SHOW_COLOR_COLORS" 
+    //% blockId="BLINKIT_I2C_SHOW_COLOR" block="8x8灯,位置 %PosNum|,清屏,特效%rgb=BLINKIT_I2C_SHOW_COLOR_COLORS" 
     //% weight=97 blockGap=8
     export function showColor(PosNum: number = 1, rgb: number) {
         let projectInfo = "7e" + "5" + "d" + PosNum + "0" + rgb + "#"
