@@ -94,9 +94,9 @@ namespace BLINKIT {
     //% weight=80 blockGap=8
     //% parts=BLINKIT_I2C trackArgs=0
     export function showFigure(PosNum: number = 1, s: string, a: number = 0, v: number = 1) {
-        PosNum -= 1,
-        let fangxiang = a * 10 + v,
-        let projectInfo = "7e" + "9" + "d" + PosNum + "1" + fangxiang + s + "#"
+        //PosNum -= 1,
+        //let fangxiang = a * 10 + v,
+        let projectInfo = "7e" + "9" + "d" + (PosNum-1) + "1" + (a * 10 + v) + s + "#"
         serial.writeString(projectInfo)
     }
 
