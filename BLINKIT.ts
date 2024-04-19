@@ -116,8 +116,8 @@ namespace BLINKIT {
     * Shows all the ZIP LEDs as a given color (range 0-255 for r, g, b). 
     * @param rgb RGB color of the LED
     */
-    //% subcategory="8x8"
-    //% blockId="BLINKIT_I2C_SHOW_COLOR" block="8x8灯,位置 %PosNum|,清屏,特效%rgb=BLINKIT_I2C_SHOW_COLOR_COLORS" 
+    //% subcategory="8x88"
+    //% blockId="BLINKIT_I2C_SHOW_COLOR" block="8x88,位置 %PosNum|,清屏,特效%rgb=BLINKIT_I2C_SHOW_COLOR_COLORS" 
     //% weight=97 blockGap=8
     export function showColor(PosNum: number = 1, rgb: number) {
         let projectInfo = "7e" + "5" + "d" + PosNum + "0" + rgb + "#"
