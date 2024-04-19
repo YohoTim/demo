@@ -90,7 +90,7 @@ namespace BLINKIT {
      * @param s is the text will be show, eg: 'Hello!'
     */
     //% subcategory="8x8"
-    //% blockId="BLINKIT_I2C_SHOWFIGURE" block="8x8,位置 %PosNum|显示字符串 %s|动画 %a|速度 %v"
+    //% blockId="BLINKIT_I2C_SHOWFIGURE" block="8x8,位置 %PosNum|显示字符串 %s|动画 %a|,速度 %v"
     //% weight=80 blockGap=8
     //% parts=BLINKIT_I2C trackArgs=0
     export function showFigure(PosNum: number = 1, s: string,a: number ,v: number ) {
