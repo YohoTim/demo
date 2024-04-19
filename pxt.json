@@ -1,7 +1,7 @@
 {
     "name": "BLINKIT",
     "version": "1.0.0",
-    "description": "麦克斯韦blinkit扩展",
+    "description": "blinkit扩展",
     "license": "MIT",
     "dependencies": {
         "core": "*"
