@@ -21,7 +21,7 @@ enum ZipLedColors {
     Red = 0,
     //% block=环绕
     Orange = 1,
-    //% block=S弯
+    //% block=zhewan
     Yellow = 2,
     //% block=扫描
     Green = 3,
@@ -37,7 +37,7 @@ enum ZipLedColors {
     Red = 0,
     //% block=环绕
     Orange = 1,
-    //% block=S弯
+    //% block=zhewan
     Yellow = 2,
     //% block=扫描
     Green = 3,
