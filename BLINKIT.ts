@@ -94,15 +94,15 @@ namespace BLINKIT {
     //% weight=80 blockGap=8
     //% parts=BLINKIT_I2C trackArgs=0
     export function showFigure(PosNum: number = 1, s: string, a: number = 0, v: number = 1) {
-    const MAX_POS = 9; // 假设最大位置为9，根据实际硬件修改这个值  
-    if (PosNum < 1 ) {  
+        const MAX_POS = 9; // 假设最大位置为9，根据实际硬件修改这个值  
+        if (PosNum < 1 ) {  
         PosNum = 0; 
-    }  
-    else if (PosNum > 9) {
+        }  
+        else if (PosNum > 9) {
         PosNum = 9;
-    }  
-    const fangxiang = a * 10 + v;  
-    let projectInfo = "7e" + "9" + "d" + PosNum + "1" + fangxiang.toString() + s + "#";  
+        }  
+        const fangxiang = a * 10 + v;  
+        let projectInfo = "7e" + "9" + "d" + PosNum + "1" + fangxiang.toString() + s + "#";  
         serial.writeString(projectInfo)
     }
 
