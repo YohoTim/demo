@@ -69,7 +69,7 @@ enum mp3mode {
     //% block=上一曲
     Green = 3,
     //% block=音量+
-    Blue = 4
+    Blue = 4,
     //% block=音量-
     Red1 = 5,
     //% block=onestop
@@ -89,11 +89,11 @@ namespace BLINKIT {
      * show text in BLINKIT
      * @param s is the text will be show, eg: 'Hello!'
     */
-    //% subcategory="8x88"
-    //% blockId="BLINKIT_I2C_SHOWFIGURE" block="8x88,位置 %PosNum|显示字符串 %s"
+    //% subcategory="8x89"
+    //% blockId="BLINKIT_I2C_SHOWFIGURE" block="8x89,位置 %PosNum|显示字符串 %s|动画 %a|速度 %v"
     //% weight=80 blockGap=8
     //% parts=BLINKIT_I2C trackArgs=0
-    export function showFigure(PosNum: number = 1, s: string) {
+    export function showFigure(PosNum: number = 1, s: string,a: numvber ,v: numvber) {
         let projectInfo = "7e" + "9" + "d" + PosNum + "1" + s + "#"
         serial.writeString(projectInfo)
     }
