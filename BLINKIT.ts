@@ -93,8 +93,10 @@ namespace BLINKIT {
     //% blockId="BLINKIT_I2C_SHOWFIGURE" block="8x8,位置 %PosNum|显示字符串 %s"
     //% weight=80 blockGap=8
     //% parts=BLINKIT_I2C trackArgs=0
-    export function showFigure(PosNum: number = 1, s: string) {
-        let projectInfo = "7e" + "9" + "d" + PosNum + "1" + s + "#"
+    export function showFigure(PosNum: number = 1, s: string, a: number = 0, v: number = 1) {
+        const fangxiang = a * 10 + v;  
+        let projectInfo = "7e" + "9" + "d" + PosNum + "1" + fangxiang.toString() + s + "#";  
+        //let projectInfo = "7e" + "9" + "d" + PosNum + "1" + s + "#"
         serial.writeString(projectInfo)
     }
 
