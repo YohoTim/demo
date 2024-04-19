@@ -90,7 +90,7 @@ namespace BLINKIT {
      * @param s is the text will be show, eg: 'Hello!'
     */
     //% subcategory="8x8"
-    //% blockId="BLINKIT_I2C_SHOWFIGURE" block="8x8,位置 %PosNum|显示字符串 %s|动画 %a|,速度 %v"
+    //% blockId="BLINKIT_I2C_SHOWFIGURE" block="8x8,位置 %PosNum|显示字符串 %s|动画 %a|速度 %v"
     //% weight=80 blockGap=8
     //% parts=BLINKIT_I2C trackArgs=0
     export function showFigure(PosNum: number = 1, s: string,a: number ,v: number ) {
@@ -117,7 +117,7 @@ namespace BLINKIT {
     * @param rgb RGB color of the LED
     */
     //% subcategory="8x8"
-    //% blockId="BLINKIT_I2C_SHOW_COLOR" block="8x8,位置 %PosNum|,清屏,特效%rgb=BLINKIT_I2C_SHOW_COLOR_COLORS" 
+    //% blockId="BLINKIT_I2C_SHOW_COLOR" block="8x8,位置 %PosNum|,清屏,动画%rgb=BLINKIT_I2C_SHOW_COLOR_COLORS" 
     //% weight=97 blockGap=8
     export function showColor(PosNum: number = 1, rgb: number) {
         let projectInfo = "7e" + "5" + "d" + PosNum + "0" + rgb + "#"
@@ -172,7 +172,7 @@ namespace BLINKIT {
     * @param rgb RGB color of the LED
     */
     //% subcategory="Servo"
-    //% blockId="BLINKIT_I2C_Servo_turn" block="舵机,位置 %PosNum|,速度 %Spd|,转动%degree" 
+    //% blockId="BLINKIT_I2C_Servo_turn" block="舵机,位置 %PosNum|,速度 %Spd|,目标%degree" 
     //% weight=97 blockGap=8
     export function servoTurn(PosNum: number = 1, Spd: number, degree: number) {
         let projectInfo = "7e" + "5" + "d" + PosNum + "0" + Spd + "#"
@@ -185,10 +185,10 @@ namespace BLINKIT {
     * @param rgb RGB color of the LED
     */
     //% subcategory="Motor"
-    //% blockId="BLINKIT_I2C_motor_turn" block="直流电机,位置 %PosNum|,速度 %Spd" 
+    //% blockId="BLINKIT_I2C_motor_turn" block="直流电机,位置 %PosNum|,方向 %Dir|,速度 %Spd" 
     //% weight=97 blockGap=8
-    export function motorTurn(PosNum: number = 1, Spd: number) {
-        let projectInfo = "7e" + "5" + "d" + PosNum + "0" + Spd + "#"
+    export function motorTurn(PosNum: number = 1, Dir: number, Spd: number) {
+        let projectInfo = "7e" + "5" + "d" + PosNum + "0" + Dir + Spd + "#"
         serial.writeString(projectInfo)
     }
 
