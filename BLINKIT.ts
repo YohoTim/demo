@@ -90,10 +90,10 @@ namespace BLINKIT {
      * @param s is the text will be show, eg: 'Hello!'
     */
     //% subcategory="8x8"
-    //% blockId="BLINKIT_I2C_SHOWFIGURE" block="8x8,位置 %PosNum|显示字符串 %s|动画 %Type_8x8=BLINKIT_I2C_SHOW_COLOR_Type_8x8|速度 %v"
+    //% blockId="BLINKIT_I2C_SHOWFIGURE" block="8x8,位置 %PosNum|显示字符串 %s|动画 %Type=BLINKIT_I2C_SHOW_8x8type|速度 %v"
     //% weight=80 blockGap=8
     //% parts=BLINKIT_I2C trackArgs=0
-    export function showFigure(PosNum: number = 1, s: string,Type_8x8: number ,v: number ) {
+    export function showFigure(PosNum: number = 1, s: string,a: number ,v: number ) {
         let projectInfo = "7e" + "9" + "d" + PosNum + "1" + s + "#"
         serial.writeString(projectInfo)
     }
@@ -129,9 +129,9 @@ namespace BLINKIT {
     */
     //% subcategory="8x8"
     //% weight=2 blockGap=8
-    //% blockId="BLINKIT_I2C_SHOW_COLOR_Type_8x8" block="%color"
-    export function Type_8x8s(color: ZipLedColors): number {
-        return Type_8x8;
+    //% blockId="BLINKIT_I2C_SHOW_8x8type" block="%type"
+    export function types(type: ZipLedColors): number {
+        return type;
     }
 
 
