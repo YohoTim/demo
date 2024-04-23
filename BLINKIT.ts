@@ -101,7 +101,7 @@ namespace BLINKIT {
     /**
      * BLINKIT initialize
      */
-    //% blockId="BLINKIT_I2C_init" block="初始化BLINKIT"
+    //% blockId="BLINKIT_I2C_init" block="初始化Blinkit"
     //% weight=100 blockGap=8
     //% parts=BLINKIT_I2C trackArgs=0
     export function init() {
